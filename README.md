@@ -181,13 +181,13 @@ network-pharmacology-anxiety/
 
 ## Author
 
-**[Faruq Mohammed]**
+**Faruq Mohammed**
 B.Pharm, M.Pharm (ongoing)
 Research Interests: Computer-Aided Drug Design (CADD) · Bioinformatics · Pharmacology · Phytochemical Research · Alternative Medicine · and Pharmaceutical Technology.
 
-- 📧 Email: your.email@example.com
-- 🔗 LinkedIn: [[Your LinkedIn](https://www.linkedin.com/in/faruq-mohammed-tashriq/)]
-- 🐙 GitHub: [[Your GitHub Profile](https://github.com/Faruq-Mohammed/)]
+- 📧 Email: faruqmdtashriq@gmail.com
+- 🔗 LinkedIn: https://www.linkedin.com/in/faruq-mohammed-tashriq/
+- 🐙 GitHub: https://github.com/Faruq-Mohammed/
 
 ---
 
