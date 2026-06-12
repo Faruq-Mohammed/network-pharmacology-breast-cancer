@@ -1,0 +1,4 @@
+mcode seed genes
+EGFR
+JUN
+PTK2
