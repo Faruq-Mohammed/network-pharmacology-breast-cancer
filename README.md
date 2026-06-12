@@ -37,7 +37,7 @@ GeneCards (Breast cancer)
 ## Repository Structure
 
 ```
-network-pharmacology-anxiety/
+network-pharmacology-breast-cancer/
 │
 ├── README.md
 │
