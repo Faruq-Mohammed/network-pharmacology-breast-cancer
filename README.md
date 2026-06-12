@@ -14,11 +14,11 @@ This project presents a systematic **network pharmacology workflow** to identify
 ```
 GeneCards (Breast cancer)
         ↓
-  Filtering (Relevance ≥ 5, Degree ≥ 50)
+  Filtering (Relevance score ≥ 15, Gifts score ≥ 60)
         ↓
   STRING Database → PPI Network
         ↓
-  Cytoscape Network Analysis → Top 10 Hub Genes
+  Cytoscape Network Analysis → Top 30 Hub Genes
         ↓
      ┌──────────────────────┐
      │                      │
@@ -42,33 +42,28 @@ network-pharmacology-anxiety/
 ├── README.md
 │
 ├── 01_data_collection/
-│   ├── GeneCards_Anxiety_raw.csv              # Raw export from GeneCards
-│   └── GeneCards_Anxiety_filtered.csv         # Filtered: Relevance ≥ 5, Degree ≥ 50
+│   ├── GeneCards_Breast_cancer_raw.csv              
+│   └── GeneCards_Breast_cancer_filtered.csv         
 │
 ├── 02_ppi_network/
-│   ├── string_input_genes.txt                 # Gene list submitted to STRING
-│   ├── string_ppi_export.tsv                  # PPI network exported from STRING
-│   └── anxiety_ppi_cytoscape.cys              # Full Cytoscape session file
+│   ├── string_input_genes.txt                 
+│   ├── string_ppi_export.tsv                  
+│   └── breast_cancer_ppi_cytoscape.cys              
 │
 ├── 03_network_analysis/
-│   ├── top10_hub_genes.csv                    # Top 10 genes by degree centrality
+│   ├── top30_hub_genes.txt                    
 │   └── figures/
-│       └── protein_protein_interaction.png              # Degree-sorted circle layout
+│       └── protein_protein_interaction.png              
 │
-├── 04_mcode_analysis/
-│   ├── mcode_top3_clusters.csv                # Top 3 cluster results
-│   ├── mcode_seed_genes.csv                   # 3 seed genes extracted
-│   └── figures/
-│       ├── mcode_cluster1.png
-│       ├── mcode_cluster2.png
-│       └── mcode_cluster3.png
+├── 04_mcode_analysis/                
+│   ├── mcode_seed_genes.txt  
 │
 ├── 05_cytohubba_analysis/
 │   ├── cytohubba_MCC_top10.csv
 │   ├── cytohubba_MNC_top10.csv
 │   ├── cytohubba_EPC_top10.csv
 │   ├── cytohubba_Degree_top10.csv
-│   ├── intersection_hub_genes.txt             # Genes common across all 4 algorithms
+│   ├── intersection_hub_genes.txt            
 │   └── figures/
 │       ├── cytohubba_mcc.png
 │       ├── cytohubba_mnc.png
@@ -77,8 +72,8 @@ network-pharmacology-anxiety/
 │       └── venn_intersection.png
 │
 ├── 06_enrichment_analysis/
-│   ├── final_hub_genes.txt                    # MCODE seeds + CytoHubba intersection
-│   ├── GO_BP_enrichment.xlsx                  # Biological Process
+│   ├── final_hub_genes.txt                   
+│   ├── GO_BP_enrichment.xlsx                 
 │   ├── KEGG_pathway_enrichment.xlsx
 │   └── figures/
 │       ├── GO_BP_barplot.png
@@ -96,8 +91,8 @@ network-pharmacology-anxiety/
 - **Database:** [GeneCards](https://www.genecards.org/)
 - **Disease:** Breast Cancer
 - **Filters Applied:**
-  - Relevance Score ≥ 5
-  - Degree ≥ 50
+  - Relevance Score ≥ 15
+  - Gifts score ≥ 60
 
 ### Step 2 — PPI Network Construction
 - **Tool:** [STRING Database](https://string-db.org/)
@@ -106,7 +101,7 @@ network-pharmacology-anxiety/
 
 ### Step 3 — Network Analysis in Cytoscape
 - Network topology analyzed using **NetworkAnalyzer**
-- Top 10 hub genes identified based on **degree centrality**
+- Top 30 hub genes identified based on **degree centrality**
 - **Degree-sorted circle layout** created for visualization
 
 ### Step 4 — MCODE Clustering
@@ -133,14 +128,12 @@ network-pharmacology-anxiety/
 
 | Analysis Step | Result |
 |---|---|
-| GeneCards (after filtering) | *XX genes* |
-| PPI Network Size | *XX nodes, XX edges* |
-| Top Hub Genes (Degree) | *Update with your genes* |
-| MCODE Seed Genes | *Update with your genes* |
-| CytoHubba Intersection | *Update with your genes* |
-| Key KEGG Pathways | *Update with your pathways* |
+| GeneCards (after filtering) | *195 genes* |
+| PPI Network Size | *195 nodes, 1145 edges* |
+| MCODE Seed Genes | *EGFR,JUN,PTK2* |
+| CytoHubba Intersection | *PIK3R1,EGFR,PIK3CA,SRC* |
+| Key KEGG Pathways | *Breast cancer* |
 
-> Fill in the table above with your actual results before publishing.
 
 ---
 
@@ -148,8 +141,7 @@ network-pharmacology-anxiety/
 
 | Figure | Description |
 |---|---|
-| `03_network_analysis/figures/ppi_circle_layout.png` | PPI network — degree-sorted circle layout |
-| `04_mcode_analysis/figures/` | Top 3 MCODE clusters |
+| `03_network_analysis/figures/protein_protein_interaction.png` | PPI network — degree-sorted circle layout |
 | `05_cytohubba_analysis/figures/venn_intersection.png` | CytoHubba Venn intersection |
 | `06_enrichment_analysis/figures/` | GO and KEGG enrichment bar plots |
 
@@ -170,7 +162,7 @@ network-pharmacology-anxiety/
 
 ## How to Reproduce This Analysis
 
-1. Download `01_data_collection/GeneCards_Anxiety_filtered.csv`
+1. Download `01_data_collection/GeneCards_Breast_cancer_filtered.csv`
 2. Submit gene list to [STRING Database](https://string-db.org/) → Export network
 3. Import network into Cytoscape → Run NetworkAnalyzer
 4. Apply MCODE plugin → Extract top 3 cluster seed genes
@@ -182,7 +174,7 @@ network-pharmacology-anxiety/
 ## Author
 
 **Faruq Mohammed**
-B.Pharm, M.Pharm (ongoing)
+B.Pharm, M.Pharm (ongoing) · 
 Research Interests: Computer-Aided Drug Design (CADD) · Bioinformatics · Pharmacology · Phytochemical Research · Alternative Medicine · and Pharmaceutical Technology.
 
 - 📧 Email: faruqmdtashriq@gmail.com
