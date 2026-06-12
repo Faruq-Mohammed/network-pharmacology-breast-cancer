@@ -178,8 +178,8 @@ B.Pharm, M.Pharm (ongoing) ·
 Research Interests: Computer-Aided Drug Design (CADD) · Bioinformatics · Pharmacology · Phytochemical Research · Alternative Medicine · and Pharmaceutical Technology.
 
 - 📧 Email: faruqmdtashriq@gmail.com
-- 🔗 LinkedIn: https://www.linkedin.com/in/faruq-mohammed-tashriq/
-- 🐙 GitHub: https://github.com/Faruq-Mohammed/
+- 🔗 LinkedIn: [Faruq Mohammed](https://www.linkedin.com/in/faruq-mohammed-tashriq/)
+- 🐙 GitHub: [Faruq Mohammed](https://github.com/Faruq-Mohammed/)
 
 ---
 
