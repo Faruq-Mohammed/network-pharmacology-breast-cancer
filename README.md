@@ -22,7 +22,7 @@ GeneCards (Breast cancer)
         ↓
      ┌──────────────────────┐
      │                      │
-  MCODE Clustering     CytoHubba Analysis
+  MCODE Clustering     CytoHubba Analysis of top 10 genes
   (Top 3 Clusters)    (MCC, MNC, EPC, Degree)
   3 Seed Genes         Intersection Genes
      │                      │
